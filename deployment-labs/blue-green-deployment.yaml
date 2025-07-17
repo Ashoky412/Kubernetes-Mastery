@@ -4,6 +4,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-blue
+  namespace: sre
 spec:
   replicas: 3
   selector:
@@ -26,6 +27,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-green
+  namespace: sre
 spec:
   replicas: 3
   selector:
