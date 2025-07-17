@@ -1,0 +1,21 @@
+---
+# k8s-deployment-labs/04-failure-simulation.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-failure
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:nonexistenttag
+        ports:
+        - containerPort: 80
