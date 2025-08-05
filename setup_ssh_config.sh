@@ -6,8 +6,8 @@ ssh_pub_key_path="$HOME/.ssh/ashok.pub"
 ssh_config_path="$HOME/.ssh/config"
 ssh_private_key_path="$HOME/.ssh/ashok"
 
-master_ip="43.205.112.106"
-worker_ip="43.205.195.145"
+master_ip="15.206.167.195"
+worker_ip="3.108.223.93"
 
 # === 2. Setup Passwordless SSH on master and worker ===
 for ip in $master_ip $worker_ip; do
